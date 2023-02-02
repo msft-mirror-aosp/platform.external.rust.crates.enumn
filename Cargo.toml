@@ -13,7 +13,7 @@
 edition = "2018"
 rust-version = "1.31"
 name = "enumn"
-version = "0.1.5"
+version = "0.1.6"
 authors = ["David Tolnay <dtolnay@gmail.com>"]
 description = "Convert number to enum"
 documentation = "https://docs.rs/enumn"
