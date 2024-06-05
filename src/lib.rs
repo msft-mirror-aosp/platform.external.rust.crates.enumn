@@ -105,6 +105,7 @@
 //!
 //! Here `Letter::n(65)` would return `Some(Letter::A)`.
 
+#![doc(html_root_url = "https://docs.rs/enumn/0.1.8")]
 #![allow(
     clippy::missing_panics_doc,
     clippy::needless_doctest_main,
@@ -140,7 +141,7 @@ pub fn derive(input: TokenStream) -> TokenStream {
     // Parse repr attribute like #[repr(u16)].
     let mut repr = None;
     for attr in input.attrs {
-        if attr.path.is_ident("repr") {
+        if attr.path().is_ident("repr") {
             if let Ok(name) = attr.parse_args::<Ident>() {
                 match name.to_string().as_str() {
                     "u8" | "u16" | "u32" | "u64" | "u128" | "usize" | "i8" | "i16" | "i32"
